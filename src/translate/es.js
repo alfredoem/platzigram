@@ -19,5 +19,6 @@ module.exports = {
   'upload': 'Subir',
   'posts': 'Publicaciones',
   'followers': 'Seguidores',
-  'following': 'Siguiendo'
+  'following': 'Siguiendo',
+  'loading': 'Cargando'
 }

@@ -22,5 +22,6 @@ module.exports = {
   'upload': 'Upload',
   'posts': 'Posts',
   'followers': 'Followers',
-  'following': 'Following'
+  'following': 'Following',
+  'loading': 'Loading'
 }

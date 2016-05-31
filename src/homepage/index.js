@@ -5,6 +5,7 @@ var title = require('title');
 var request = require('superagent');
 var header = require('../header');
 var axios = require('axios');
+var leading = require('../loading');
 
 page('/', header, asyncLoad, function (ctx, next) {
   title('Platzigram');
@@ -51,6 +52,9 @@ function loadPicturesFetch(ctx, next) {
 }
 
 async function asyncLoad(ctx, next) {
+  
+  $('#main-container').append(leading());
+  
   try {
     ctx.pictures = await fetch('/api/pictures').then(res => res.json());
     next();

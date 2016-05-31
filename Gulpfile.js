@@ -6,6 +6,17 @@ var browserify = require('browserify');
 var source = require('vinyl-source-stream');
 var watchify = require('watchify');
 
+gulp.task('fonts', function(){
+  gulp
+    .src([
+      './node_modules/material-design-icons/iconfont/MaterialIcons-Regular.eot',
+      './node_modules/material-design-icons/iconfont/MaterialIcons-Regular.woff2',
+      './node_modules/material-design-icons/iconfont/MaterialIcons-Regular.woff',
+      './node_modules/material-design-icons/iconfont/MaterialIcons-Regular.ttf',
+    ])
+    .pipe(gulp.dest('./public/fonts'));
+});
+
 gulp.task('styles', function () {
   gulp
     .src('index.scss')
